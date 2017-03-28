@@ -1,0 +1,22 @@
+{
+  "name": "fable-node6",
+  "version": "1.0.0",
+  "description": "Fable bindings for Node 6.x",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jgrund/fable-node6.git"
+  },
+  "publishConfig": {
+    "registry": " https://registry.npmjs.org"
+  },
+  "keywords": [
+    "F#",
+    "Fable",
+    "Node"
+  ],
+  "author": "Joe Grund",
+  "license": "MIT",
+  "dependencies": {
+    "fable-core": "^1.0.0-narumi-8"
+  }
+}
