@@ -17,6 +17,6 @@
   "author": "Joe Grund",
   "license": "MIT",
   "dependencies": {
-    "fable-core": "@next"
+    "fable-core": "next"
   }
 }
