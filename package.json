@@ -17,6 +17,6 @@
   "author": "Joe Grund",
   "license": "MIT",
   "dependencies": {
-    "fable-core": "^1.0.0-narumi-8"
+    "fable-core": "@next"
   }
 }

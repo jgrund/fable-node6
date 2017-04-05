@@ -3,7 +3,12 @@
     <TargetFramework>netstandard1.6</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="src/Node6.fs" />
+    <Compile Include="src/Base.fs" />
+    <Compile Include="src/Events.fs" />
+    <Compile Include="src/Buffer.fs" />
+    <Compile Include="src/Stream.fs" />
+    <Compile Include="src/ChildProcess.fs" />
+    <Compile Include="src/Globals.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FSharp.NET.Sdk" Version="1.0.*" PrivateAssets="All" />
