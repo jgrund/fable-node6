@@ -12,7 +12,7 @@ module child_process_types =
         abstract code: int with get, set
         abstract signal: string option with get, set
 
-    and [<AllowNullLiteral>] ChildProcess =
+    type [<AllowNullLiteral>] ChildProcess =
         inherit event_types.EventEmitter
         abstract stdin: stream_types.Writable with get, set
         abstract stdout: stream_types.Readable with get, set
@@ -25,14 +25,14 @@ module child_process_types =
         abstract disconnect: unit -> unit
         abstract unref: unit -> unit
 
-    and [<AllowNullLiteral>] ChildProcessStatic =
+    type [<AllowNullLiteral>] ChildProcessStatic =
         [<Emit("new $0()")>] abstract Create: unit -> ChildProcess
 
-    and ExecOptions = {
+    type ExecOptions = {
         encoding : string option;
     }
 
-    and Globals =
+    type Globals =
         abstract ChildProcess: ChildProcessStatic with get, set
         abstract spawn: command: string * ?args: ResizeArray<string> * ?options: obj -> ChildProcess
         abstract exec: command: string * ?options: ExecOptions * ?callback:(ExecError option -> U2<string, buffer_types.Buffer> -> U2<string, buffer_types.Buffer> -> unit) -> ChildProcessStatic

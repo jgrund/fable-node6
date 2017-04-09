@@ -1,9 +1,9 @@
 module rec Node.Stream
 
 open Fable.Core
+open Fable.Import.JS
 open Node.Buffer
 open Node.Events
-open Fable.Import.JS
 
 module stream_types =
     type [<AllowNullLiteral>] Stream =
@@ -35,6 +35,7 @@ module stream_types =
 
     type [<AllowNullLiteral>] ReadableStatic = 
         [<Emit("new $0($1)")>] abstract Create: readableOptions:ReadableOptions -> Readable
+        [<Emit("new $0($1)")>] abstract Create: unit -> Readable
 
     type WritableOptions = {
         highWaterMark: float option;
