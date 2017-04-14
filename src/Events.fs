@@ -8,10 +8,10 @@ module event_types =
     type [<AllowNullLiteral>] EventEmitter =
         abstract defaultMaxListeners: float with get, set
         abstract addListener: ev: U2<string, Symbol> * listener: Function -> EventEmitter
-        abstract on: ev: Symbol * listener: ('a -> 'b) -> EventEmitter
-        abstract on: ev: string * listener: ('a -> 'b) -> EventEmitter
-        abstract once: ev: Symbol * listener: ('a -> 'b) -> EventEmitter
-        abstract once: ev: string * listener: ('a -> 'b) -> EventEmitter
+        abstract on: ev: Symbol * listener: ('a -> unit) -> EventEmitter
+        abstract on: ev: string * listener: ('a -> unit) -> EventEmitter
+        abstract once: ev: Symbol * listener: ('a -> unit) -> EventEmitter
+        abstract once: ev: string * listener: ('a -> unit) -> EventEmitter
         abstract prependListener: ev: U2<string, Symbol> * listener: Function -> EventEmitter
         abstract prependOnceListener: ev: U2<string, Symbol> * listener: Function -> EventEmitter
         abstract removeListener: ev: U2<string, Symbol> * listener: Function -> EventEmitter
