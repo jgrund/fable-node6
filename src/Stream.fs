@@ -11,7 +11,7 @@ module stream_types =
         abstract pipe: destination: Writable<'a> * ?options: obj -> Writable<'a>
 
     type [<AllowNullLiteral>] StreamStatic =
-        [<Emit("new $0()")>] abstract Create<'a> : unit -> Stream
+        [<Emit("new $0()")>] abstract Create : unit -> Stream
 
     type [<AllowNullLiteral>] ReadableOptions =
         abstract highWaterMark: float option with get, set
