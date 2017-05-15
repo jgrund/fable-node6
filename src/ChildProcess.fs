@@ -6,6 +6,7 @@ open Node.Stream
 open Node.Buffer
 open Node.Base
 
+[<AutoOpen>]
 module child_process_types =
     type ExecError = 
         inherit NodeJS.Error

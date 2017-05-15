@@ -3,9 +3,10 @@ module rec Node.Process
 open System
 open Fable.Core
 open Fable.Import.JS
+open Node.Base.NodeJS
 open Node.Stream
 
-  type [<AllowNullLiteral>] Process =
+type [<AllowNullLiteral>] Process =
       abstract addListener: ``event``: U2<string, Symbol> * listener: Function -> obj
       abstract on: ``event``: U2<string, Symbol> * listener: Function -> obj
       abstract once: ``event``: U2<string, Symbol> * listener: Function -> obj
@@ -33,6 +34,7 @@ open Node.Stream
       abstract pid: float with get, set
       abstract title: string with get, set
       abstract arch: string with get, set
+      abstract platform: Platform with get, set
       abstract connected: bool with get, set
       abstract abort: unit -> unit
       abstract chdir: directory: string -> unit

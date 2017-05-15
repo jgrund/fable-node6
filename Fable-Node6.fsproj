@@ -7,6 +7,7 @@
     <Compile Include="src/Events.fs" />
     <Compile Include="src/Buffer.fs" />
     <Compile Include="src/Stream.fs" />
+    <Compile Include="src/Fs.fs" />
     <Compile Include="src/Net.fs" />
     <Compile Include="src/ChildProcess.fs" />
     <Compile Include="src/Process.fs" />

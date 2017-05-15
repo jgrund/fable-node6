@@ -4,9 +4,10 @@ open Fable.Core
 open Node.Base
 open Fable.Import.JS
 
+[<AutoOpen>]
 module buffer_types =
-    type BufferEncoding =
-    (* TODO StringEnum ascii | utf8 | utf16le | ucs2 | binary | hex *) string
+    type [<StringEnum>] BufferEncoding =
+        | Ascii | Utf8 | Utf16le | Ucs2 | Binary | Hex
 
     type Buffer = 
         abstract write: string: string * ?offset: float * ?length: float * ?encoding: string -> float
