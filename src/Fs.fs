@@ -123,9 +123,9 @@ module fs_types =
       abstract S_IXOTH: float with get, set
         
     type Globals =
-        abstract watch: filename: string * ?listener: (string -> string -> obj) -> FSWatcher
-        abstract watch: filename: string * encoding: FsWatcherEncoding * ?listener: (string -> string -> obj) -> FSWatcher
-        abstract watch: filename: string * options: FsWatcherOptions * ?listener: (string -> string -> obj) -> FSWatcher
+        abstract watch: filename: string * ?listener: (string -> string -> unit) -> FSWatcher
+        abstract watch: filename: string * encoding: FsWatcherEncoding * ?listener: (string -> string -> unit) -> FSWatcher
+        abstract watch: filename: string * options: FsWatcherOptions * ?listener: (string -> string -> unit) -> FSWatcher
         abstract ReadStream: ReadStreamStatic with get, set
         abstract WriteStream: WriteStreamStatic with get, set
         abstract createReadStream: path: string * ?options: ReadableOptions -> ReadStream<string>
