@@ -1,4 +1,4 @@
-module rec Node.Base
+module rec Fable.Import.Node.Base
 
 open System
 open Fable.Core
@@ -69,6 +69,9 @@ module NodeJS =
     type [<AllowNullLiteral>] CpuUsage =
         abstract user: float with get, set
         abstract system: float with get, set
+
+    type [<StringEnum>] Arch =
+        | Arm | Arm64 | Ia32 | Mips | Mipsel | Ppc | Ppc64 | S390 | S390x | X32 | X64 | X86
 
     type [<StringEnum>] Platform =
         | Aix | Android | Darwin | Freebsd | Linux | Openbsd | Sunos | Win32
