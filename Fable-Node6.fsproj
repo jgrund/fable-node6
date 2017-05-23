@@ -11,6 +11,10 @@
     <Compile Include="src/Stream.fs" />
     <Compile Include="src/Fs.fs" />
     <Compile Include="src/Net.fs" />
+    <Compile Include="src/Crypto.fs" />
+    <Compile Include="src/Tls.fs" />
+    <Compile Include="src/Http.fs" />
+    <Compile Include="src/Https.fs" />
     <Compile Include="src/ChildProcess.fs" />
     <Compile Include="src/Process.fs" />
     <Compile Include="src/Globals.fs" />

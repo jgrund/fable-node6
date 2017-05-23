@@ -19,6 +19,18 @@ let Fs: Fs.IExports = jsNative
 [<Import("*","net")>]
 let Net: Net.IExports = jsNative
 
+[<Import("*","crypto")>] 
+let crypto: Crypto.IExports = jsNative
+
+[<Import("*","tls")>] 
+let tls: Tls.IExports = jsNative
+
+[<Import("*","http")>]
+let Http: Http.IExports = jsNative
+
+[<Import("*","https")>]
+let Https: Https.IExports = jsNative
+
 [<Import("*", "querystring")>]
 let Querystring: Querystring.IExports = jsNative
 
